@@ -1,0 +1,32 @@
+timeweb.cloud
+регистрация, конфигурируем сервер (ubuntu, тарифный план ...) и оплата.
+копируем SSH и вставляем в терминал -> yes
+вставляем пароль (если пароль не проходит изменить на сервере на новый)
+пароль вставляется без отображения
+
+
+mkdir /root/bots/ALEX_VELIEVS_BOT/
+cd /root/bots/ALEX_VELIEVS_BOT/
+apt install python3 pip git ... -y
+cd /root/bots/
+git clone https://github.com/StIgorLeonSimf/ALEX_VELIEVS_BOT.git
+cd /root/bots/ALEX_VELIEVS_BOT/
+python3 -m venv venv
+source venv/bin/activate
+
+pip install --upgrade pip
+pip install aiogram alchemy
+ls -la  просмотреть файлы папки
+
+cat config.py   - для просмотра и изменения содержимого
+pip install python dotenv
+nano .env
+заносим в него нужные токены и адреса
+chmod 600 .env  - запрет на просмотр и изменение для посторонних
+
+после внесения изменений в боте
+git pull origin master  закачивает изменения на сервер
+
+cp .env.example .env   копируем в новый файл проекта из терминала .env
+
+
